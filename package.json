@@ -1,0 +1,14 @@
+{
+  "name": "msoa-inventory-service",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Stock, reservation atomique et liberation idempotente.",
+  "engines": {
+    "node": ">=24.0.0"
+  },
+  "scripts": {
+    "start": "node --env-file-if-exists=.env backend/services/inventory/index.mjs",
+    "check": "node --check backend/services/inventory/index.mjs && node --check backend/shared/runtime.mjs"
+  }
+}
